@@ -8,7 +8,8 @@ function App() {
   
   // テキストの変更値取得
   const onChangeText = (e) => {
-    setText(e.taget.value);
+    setText(e.target.value);
+    console.log(e.target.value);
   }
   
   // ボタンクリック表示反転
