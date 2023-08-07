@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState } from 'react';
 import './App.css' ;
 import { ChildArea } from './components/ChildArea';
+import { CssModules } from './components/CssModules';
 
 function App() {
   const [text, setText] = useState(); // テキストの入力check
@@ -31,6 +32,7 @@ function App() {
       <br /><br />
       <button onClick={onClickOpen}>表示/非表示</button>
       <ChildArea open={open} onClickClose={onClickClose} />
+      <CssModules />
     </div>
   );
 }
