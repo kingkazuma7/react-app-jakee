@@ -1,25 +1,27 @@
 import { useState } from 'react';
 import './App.css' ;
+import { ChildArea } from './components/ChildArea';
 
 function App() {
-  console.log("app");
-  const [count, setCount] = useState(0);
+  const [text, setText] = useState();
+  const [open, setOpen] = useState(false);
   
-  const onClickCountUp = () => {
-    setCount(count + 1);
-    console.log("setcount");
+  // テキストの変更値取得
+  const onChangeText = (e) => {
+    setText(e.taget.value);
   }
   
-  const onClickCountDown = () => {
-    setCount(count - 1);
-    console.log("setcount");
+  // ボタンクリック表示反転
+  const onClickOpen  = () => {
+    setOpen(!open);
   }
   
   return (
     <div className="App">
-      <p>{count}</p>
-      <button onClick={onClickCountUp}>カウントアップ</button>
-      <button onClick={onClickCountDown}>カウントダウン</button>
+      <input type="text" onChange={onChangeText} />
+      <br /><br />
+      <button onClick={onClickOpen}>表示/非表示</button>
+      <ChildArea open={open} />
     </div>
   );
 }
