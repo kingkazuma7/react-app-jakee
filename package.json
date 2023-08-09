@@ -36,6 +36,8 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.64.2"
+    "sass": "^1.64.2",
+    "styled-components": "^6.0.7",
+    "styled-jsx": "^5.1.2"
   }
 }
