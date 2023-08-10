@@ -1,7 +1,7 @@
-import classes from "./CssModules.module.scss";
+import classes from './CssModules.module.scss'
 
 export const CssModules = () => {
-  console.log(classes);
+  console.log(classes)
   return (
     <div className={classes.container}>
       <p className={classes.title}>CssModules</p>

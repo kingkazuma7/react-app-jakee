@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledComponents = () => {
   return (
@@ -17,9 +17,9 @@ const SContainer = styled.div`
   place-content: center;
   background-color: antiquewhite;
   margin-bottom: 3rem;
-`;
+`
 const SButton = styled.button`
   width: fit-content;
   text-align: center;
   margin: 0 auto;
-`;
+`
