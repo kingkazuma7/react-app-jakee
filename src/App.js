@@ -8,7 +8,7 @@ import Emotion from './components/Emotion'
 import Home from './components/routing/Home'
 import Page1 from './components/routing/Page1'
 import Page2 from './components/routing/Page2'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   const [text, setText] = useState() // テキストの入力check
@@ -40,13 +40,16 @@ function App() {
       <br />
       <button onClick={onClickOpen}>表示/非表示</button>
       <h2>section05:ルーティング</h2>
-      <BrowserRouter>
-        <div className="App">
-          <Home />
-          <Page1 />
-          <Page2 />
-        </div>
-      </BrowserRouter>
+      <Router>
+        <Link to="/">Home</Link>
+        <Link to="/page1">Page 1</Link>
+        <Link to="/page2">Page 2</Link>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+        </Routes>
+      </Router>
       <h2>section04:cssあてかた</h2>
       <ChildArea open={open} onClickClose={onClickClose} />
       <CssModules />

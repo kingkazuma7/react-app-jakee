@@ -2,7 +2,9 @@ import React from 'react'
 
 const Page2 = () => {
   return (
-    <h2>Page2です</h2>
+    <>
+      <h2>Page2です</h2>
+    </>
   )
 }
 
