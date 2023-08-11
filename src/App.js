@@ -9,6 +9,8 @@ import Home from './components/routing/Home'
 import Page1 from './components/routing/Page1'
 import Page2 from './components/routing/Page2'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import PrimaryButton from './components/atoms/button/PrimaryButton'
+import SecondaryButton from './components/atoms/button/SecondaryButton'
 
 function App() {
   const [text, setText] = useState() // テキストの入力check
@@ -39,8 +41,11 @@ function App() {
       <br />
       <br />
       <button onClick={onClickOpen}>表示/非表示</button>
+      <h2>section06:Atomic design</h2>
+        <PrimaryButton>テスト</PrimaryButton>
+        <SecondaryButton>検索</SecondaryButton>
       <h2>section05:ルーティング</h2>
-      <Router>
+      {/* <Router>
         <Link to="/">Home</Link>
         <Link to="/page1">Page 1</Link>
         <Link to="/page2">Page 2</Link>
@@ -49,13 +54,13 @@ function App() {
           <Route path="/page1" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />} />
         </Routes>
-      </Router>
+      </Router> */}
       <h2>section04:cssあてかた</h2>
-      <ChildArea open={open} onClickClose={onClickClose} />
+      {/* <ChildArea open={open} onClickClose={onClickClose} />
       <CssModules />
       <StyledJsx />
       <StyledComponents />
-      <Emotion />
+      <Emotion /> */}
     </div>
   )
 }
